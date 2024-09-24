@@ -1,0 +1,36 @@
+<form id="metafieldForm">
+  <label for="metafieldValue">Metafield Value:</label>
+  <input type="text" id="metafieldValue" name="metafieldValue">
+  <button type="submit">Save</button>
+</form>
+
+<script>
+  document.getElementById('metafieldForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const metafieldValue = document.getElementById('metafieldValue').value;
+
+    fetch('/admin/api/2023-04/metafields.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Access-Token': 'YOUR_ACCESS_TOKEN',
+      },
+      body: JSON.stringify({
+        metafield: {
+          namespace: 'your_namespace',
+          key: 'your_key',
+          value: metafieldValue,
+          value_type: 'string',
+        },
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  });
+</script>

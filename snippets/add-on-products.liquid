@@ -1,0 +1,103 @@
+<style>
+  .frequently-bought-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+
+  .frequently-bought-container .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .frequently-bought-container .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+  }
+
+  .frequently-bought-container .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .frequently-bought-container .product-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    width: 6rem;
+  }
+
+  .frequently-bought-container .product-name {
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+
+  .frequently-bought-container .product-price {
+    color: #888;
+    font-size: 14px;
+    text-align: left !important;
+    margin: 0;
+  }
+
+  .frequently-bought-container .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+
+<section class="frequently-bought-container">
+  <h2 class="section-title">Frequently Bought Together</h2>
+  <div class="product-grid">
+    <article class="product-card">
+      <img
+        width=""
+        height=""
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets%2F0606f39bbcf84a9bbb54d557506b0b32%2F1ab1bd6d611c419c95125698829742bb"
+        alt="Product 1"
+        class="product-image" />
+      <div class="card__details">
+        <h3 class="product-name">Product 1</h3>
+        <p class="product-price">$50.00</p>
+      </div>
+
+    </article>
+    <article class="product-card">
+      <img
+        width=""
+        height=""
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets%2F0606f39bbcf84a9bbb54d557506b0b32%2F9087678d78da4281aeb4a4f1e60f303b"
+        alt="Product 2"
+        class="product-image" />
+      <h3 class="product-name">Product 2</h3>
+      <p class="product-price">$70.00</p>
+    </article>
+    <article class="product-card">
+      <img
+        width=""
+        height=""
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets%2F0606f39bbcf84a9bbb54d557506b0b32%2F7ca7fff6bd094558a2d0ad9d8dce98fe"
+        alt="Product 3"
+        class="product-image" />
+      <h3 class="product-name">Product 3</h3>
+      <p class="product-price">$30.00</p>
+    </article>
+  </div>
+</section>
